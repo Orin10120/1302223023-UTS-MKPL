@@ -32,7 +32,7 @@ public class EmployeeSalary extends Employee  {
 
     public void EmployeeSalaryIncome(int monthlySalary){
         if (super.getIsForeigner()) {
-            monthlySalary = (int) (monthlySalary * 0.5);
+            monthlySalary = (int) (monthlySalary + (monthlySalary * 0.5));
         }
     }
 

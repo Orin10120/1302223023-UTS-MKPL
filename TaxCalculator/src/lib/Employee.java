@@ -8,16 +8,24 @@ public class Employee {
 	private String idNumber;
 	private String address;
 	private Boolean isForeigner;
-	private Boolean gender; ////true = Laki-laki, false = Perempuan
+	
+	public enum Gender { 
+		laki_laki,
+		perempuan
+	}
 	
 
-	public Employee(String employeeId, String firstName, String lastName, String idNumber, String address, Boolean isForeigner) {
+	public Employee(String employeeId, String firstName, String lastName, String idNumber, String address, Boolean isForeigner, Gender gender) {
 		this.employeeId = employeeId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.idNumber = idNumber;
 		this.address = address;
 		this.isForeigner = isForeigner;
+	}
+
+	public Gender getGender() {
+		return null;
 	}
 
 	public Employee(String employeeId2String, String firstName2String, String lastName2String, String address2String, Boolean isForeigner2Boolean) {

@@ -4,10 +4,11 @@ public class EmployeeSalary extends Employee  {
 
     private int monthlySalary;
 	private int otherMonthlyIncome;
-	private int annualDeductible;
+    private int annualDeductible;
+
 
     public EmployeeSalary(Employee employee) {
-        super(employee.getEmployeeId(), employee.getFirstName(), employee.getLastName(),employee.getAddress(), employee.getIsForeigner());
+        super(employee.getEmployeeId(), employee.getFirstName(), employee.getLastName(),employee.getAddress(), employee.getIsForeigner(), employee.getGender());
     }
 
 
@@ -50,6 +51,14 @@ public class EmployeeSalary extends Employee  {
     
     public int AdditionalIncome() {
         return otherMonthlyIncome;
+    }
+
+    public int getOtherMonthlyIncome() {
+        return otherMonthlyIncome;
+    }
+
+    public int getAnnualDeductible() {
+        return annualDeductible;
     }
 
 }

@@ -1,5 +1,8 @@
 package lib;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class Employee {
 
 	private String employeeId;
@@ -9,11 +12,13 @@ public class Employee {
 	private String address;
 	private Boolean isForeigner;
 	
+	
 	public enum Gender { 
 		laki_laki,
 		perempuan
 	}
-	
+	private Gender gender;
+	public List<SetChild> children;
 
 	public Employee(String employeeId, String firstName, String lastName, String idNumber, String address, Boolean isForeigner, Gender gender) {
 		this.employeeId = employeeId;
@@ -22,14 +27,17 @@ public class Employee {
 		this.idNumber = idNumber;
 		this.address = address;
 		this.isForeigner = isForeigner;
+		this.gender = gender;
+
+		children = new LinkedList<SetChild>();
 	}
+
+	public Employee(String employeeId2String, String firstName2String, String lastName2String, String address2String, Boolean isForeigner2Boolean, Gender gender2Gender) {	
+	}
+
 
 	public Gender getGender() {
-		return null;
-	}
-
-	public Employee(String employeeId2String, String firstName2String, String lastName2String, String address2String, Boolean isForeigner2Boolean) {
-		
+		return gender;
 	}
 
 
@@ -79,6 +87,14 @@ public class Employee {
 
 	public void setIsForeigner(Boolean isForeigner) {
 		this.isForeigner = isForeigner;
+	}
+
+	public int getChildrenCount() {
+		return children.size();
+	}
+
+	public void addChild(String childName, String childIdNumber) {
+		children.add(new SetChild(childName, childIdNumber));
 	}
 
 }

@@ -1,20 +1,19 @@
 package lib;
 
-import java.util.LinkedList;
-import java.util.List;
+
 
 public class EmployeeSpouse extends Employee {
     
     private String spouseName;
 	private String spouseIdNumber;
-    private List<String> childNames;
-	private List<String> childIdNumbers;
+    private Boolean IsMarried;
+    
 
-    public EmployeeSpouse(Employee employee) {
-        super(employee.getEmployeeId(), employee.getFirstName(), employee.getLastName(), employee.getAddress(), employee.getIsForeigner());
+    public EmployeeSpouse(Employee employee, String spouseName, String spouseIdNumber) {
+        super(employee.getEmployeeId(), employee.getFirstName(), employee.getLastName(), employee.getAddress(), employee.getIsForeigner(), employee.getGender());
 
-        childNames = new LinkedList<String>();
-		childIdNumbers = new LinkedList<String>();
+        this.spouseName = spouseName;
+        this.spouseIdNumber = spouseIdNumber;
     }
 
     public String getSpouseName() {
@@ -33,9 +32,8 @@ public class EmployeeSpouse extends Employee {
         this.spouseIdNumber = super.getEmployeeId();
     }
 
-    public void addChild(String childName, String childIdNumber) {
-        childNames.add(childName);
-        childIdNumbers.add(childIdNumber);
+    public Boolean getIsMarried() {
+        return IsMarried;
     }
 
 }

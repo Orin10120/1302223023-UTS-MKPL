@@ -2,6 +2,7 @@ package lib;
 
 public class EmployeeSalary extends Employee  {
 
+    //data EmployeeSalary
     private int monthlySalary;
 	private int otherMonthlyIncome;
     private int annualDeductible;
@@ -11,7 +12,7 @@ public class EmployeeSalary extends Employee  {
         super(employee.getEmployeeId(), employee.getFirstName(), employee.getLastName(),employee.getAddress(), employee.getIsForeigner(), employee.getGender());
     }
 
-
+    //Fungsi untuk menentukan gaji bulanan pegawai berdasarkan grade kepegawaiannya
     public void setMonthlySalary(int grade) {	
 		if (grade == 1) {
 			monthlySalary = 3000000;

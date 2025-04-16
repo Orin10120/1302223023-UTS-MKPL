@@ -2,6 +2,7 @@ package lib;
 
 public class SetChild {
     
+    //data SetChild
     private String childName;
     private String childIdNumber;
 

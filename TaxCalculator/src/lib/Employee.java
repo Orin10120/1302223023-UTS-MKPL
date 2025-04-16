@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Employee {
 
+	//data Employee
 	private String employeeId;
 	private String firstName;
 	private String lastName;
@@ -17,7 +18,7 @@ public class Employee {
 		laki_laki,
 		perempuan
 	}
-	private Gender gender;
+	private Gender gender; //true = Laki-laki, false = Perempuan
 	public List<SetChild> children;
 
 	public Employee(String employeeId, String firstName, String lastName, String idNumber, String address, Boolean isForeigner, Gender gender) {

@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 public class EmployeeWorking extends Employee {
 
+    //data EmployeeWorking
     private int yearJoined;
 	private int monthJoined;
 	private int monthWorkingInYear;
@@ -18,6 +19,8 @@ public class EmployeeWorking extends Employee {
         this.monthWorkingInYear = monthWorkingInYear ;
     }
 
+
+    //Fungsi untuk menghitung berapa lama pegawai bekerja dalam setahun ini
     public int getAnnualIncomeTax() {
 
         LocalDate date = LocalDate.now();

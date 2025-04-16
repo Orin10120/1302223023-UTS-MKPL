@@ -4,6 +4,7 @@ package lib;
 
 public class EmployeeSpouse extends Employee {
     
+    //data EmployeeSpouse
     private String spouseName;
 	private String spouseIdNumber;
     private Boolean IsMarried;
